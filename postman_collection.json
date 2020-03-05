@@ -1,0 +1,206 @@
+{
+	"variables": [],
+	"info": {
+		"name": "spring-oauth",
+		"_postman_id": "a64fdeb4-41f8-b293-bb3d-0eddd709c249",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Refresh token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "tejpal-client",
+						"password": "some-secret",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:9191/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVqcGFsLWNsaWVudDpzb21lLXNlY3JldA==",
+						"description": ""
+					},
+					{
+						"key": "grant_type",
+						"value": "password",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "tejpal",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tejpal",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "698d8c46-13b2-4d7f-a750-17c739c568ec",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "b723ae32-faa1-4b4f-b198-da2d1da43936",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Local oauth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "tejpal-client",
+						"password": "some-secret",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:9191/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVqcGFsLWNsaWVudDpzb21lLXNlY3JldA==",
+						"description": ""
+					},
+					{
+						"key": "grant_type",
+						"value": "password",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "tejpal",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tejpal",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "698d8c46-13b2-4d7f-a750-17c739c568ec",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "b723ae32-faa1-4b4f-b198-da2d1da43936",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"url": "http://localhost:9191/users/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 08e8336d-96d1-412b-a631-1c1f4f080ee2",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \n        \"username\": \"tejpal\",\n        \"salary\": 78239,\n        \"age\": 29,\n        \"password\":\"tejpal\"\n        }\n    "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"url": "http://localhost:9191/users/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 08e8336d-96d1-412b-a631-1c1f4f080ee2",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \n        \"username\": \"tejpal\",\n        \"salary\": 78239,\n        \"age\": 29,\n        \"password\":\"tejpal\"\n        }\n    "
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
